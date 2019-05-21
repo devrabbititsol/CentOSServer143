@@ -9,7 +9,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 @SuppressWarnings("unused")
 public class ContactScreen extends BaseClass {
 	
-	public static String primaryInfo  = "{\"user_id\":7,\"is_generate\":false,\"is_execute\":false,\"is_web\":true,\"project_url\":\"https://www.devrabbit.com/\",\"report_upload_url\":\"http://192.168.1.143:8080/UploadReportFile\",\"project_name\":\"CentOSTest\",\"project_description\":\"s\",\"project_id\":299,\"module_name\":\"DevrabbitTest\",\"module_description\":\"ds\",\"sub_module_id\":0,\"module_id\":447,\"testcase_name\":\"TC_Demo\",\"testcase_id\":479,\"testset_id\":0,\"executed_timestamp\":-644699899,\"browser_type\":\"chrome\"}";
+	public static String primaryInfo  = "{\"user_id\":7,\"is_generate\":false,\"is_execute\":false,\"is_web\":true,\"project_url\":\"https://www.devrabbit.com/\",\"report_upload_url\":\"http://192.168.1.143:8080/UploadReportFile\",\"project_name\":\"CentOSTest\",\"project_description\":\"s\",\"project_id\":299,\"module_name\":\"DevrabbitTest\",\"module_description\":\"ds\",\"sub_module_id\":0,\"module_id\":447,\"testcase_name\":\"TC_Demo\",\"testcase_id\":479,\"testset_id\":0,\"executed_timestamp\":-644441827,\"browser_type\":\"mozilla\"}";
 
 	public static String projectName = "centostest";
 	public WebDriver driver;
