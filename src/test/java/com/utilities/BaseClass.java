@@ -185,7 +185,7 @@ capabilities.setCapability("marionette", true);
 FirefoxOptions firefoxOptions = new FirefoxOptions(capabilities);
 firefoxOptions.setBinary(binary);
 firefoxOptions.addArguments("--display=99");*/
-			driver = new FirefoxDriver(firefoxOptions);
+			driver = new FirefoxDriver();
 
 			System.out.println("FireFox Browser is Launched");
 		} else if (browserName.equalsIgnoreCase("safari")) {
