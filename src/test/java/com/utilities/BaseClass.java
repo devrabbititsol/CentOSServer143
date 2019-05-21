@@ -179,13 +179,15 @@ public class BaseClass {
 			System.out.println("Chrome Browser is Launched");
 		} else if (browserName.equalsIgnoreCase("mozilla")) {
 			System.setProperty("webdriver.gecko.driver", geckoFireFoxDriverPath);
-/*FirefoxBinary binary = new FirefoxBinary();
+FirefoxBinary binary = new FirefoxBinary();
 DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 capabilities.setCapability("marionette", true);
 FirefoxOptions firefoxOptions = new FirefoxOptions(capabilities);
 firefoxOptions.setBinary(binary);
-firefoxOptions.addArguments("--display=99");*/
-			driver = new FirefoxDriver();
+firefoxOptions.addArguments("--no-sandbox"); // Bypass OS security model
+				firefoxOptions.addArguments("--headless"); 
+			//firefoxOptions.addArguments("--display=99");
+			driver = new FirefoxDriver(firefoxOptions);
 
 			System.out.println("FireFox Browser is Launched");
 		} else if (browserName.equalsIgnoreCase("safari")) {
