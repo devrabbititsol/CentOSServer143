@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
+import org.openqa.selenium.firefox.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -179,8 +179,13 @@ public class BaseClass {
 			System.out.println("Chrome Browser is Launched");
 		} else if (browserName.equalsIgnoreCase("mozilla")) {
 			System.setProperty("webdriver.gecko.driver", geckoFireFoxDriverPath);
-
-			driver = new FirefoxDriver();
+FirefoxBinary binary = new FirefoxBinary();
+DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+capabilities.setCapability("marionette", true);
+FirefoxOptions firefoxOptions = new FirefoxOptions(capabilities);
+firefoxOptions.setBinary(binary);
+firefoxOptions.addArguments("--display=9999");
+			driver = new FirefoxDriver(firefoxOptions);
 
 			System.out.println("FireFox Browser is Launched");
 		} else if (browserName.equalsIgnoreCase("safari")) {
