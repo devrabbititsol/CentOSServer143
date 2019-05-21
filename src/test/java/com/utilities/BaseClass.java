@@ -184,7 +184,7 @@ DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 capabilities.setCapability("marionette", true);
 FirefoxOptions firefoxOptions = new FirefoxOptions(capabilities);
 firefoxOptions.setBinary(binary);
-firefoxOptions.addArguments("--display=9999");
+firefoxOptions.addArguments("--display=0");
 			driver = new FirefoxDriver(firefoxOptions);
 
 			System.out.println("FireFox Browser is Launched");
